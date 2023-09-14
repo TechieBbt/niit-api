@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../.."
+		},
+		{
+			"path": "../../../../../../Documents/BBT CODING PRACTICE"
+		},
+		{
+			"path": "../../../../../../Documents/BBT CODING CLASS"
+		},
+		{
+			"path": "../../../../../../../../xampp/htdocs"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "example-app"
+	}
+}

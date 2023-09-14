@@ -23,3 +23,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('home', [NiitController::class, 'index']);
 
 Route::post('niits', [NiitController::class, 'createNiit']);
+
+Route::get('niits', [NiitController::class, 'allNiit']);
+
+Route::put('niits/{id}', [NiitController::class, 'updateNiit']);
+
+Route::delete('niits/{id}', [NiitController::class, 'deleteNiit']);
+
