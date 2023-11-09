@@ -11,6 +11,15 @@
 		},
 		{
 			"path": "../../../../../../../../xampp/htdocs"
+		},
+		{
+			"path": "../../../../../bbdata-app"
+		},
+		{
+			"path": "../../../../../products-app"
+		},
+		{
+			"path": "../../../../../blog-app"
 		}
 	],
 	"settings": {
