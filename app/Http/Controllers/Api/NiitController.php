@@ -37,8 +37,9 @@ class NiitController extends Controller
         //             'department' => $request->department,
         //             'course' => $request->course,
         //             'phone' => $request->phone,
-        //     ]);
-           $niit = niit::create([
+        //     ]);           
+        // }
+        $niit = niit::create([
                     'firstname' => $request->firstname,
                     'lastname' => $request->lastname,
                     'department' => $request->department,
@@ -56,8 +57,6 @@ class NiitController extends Controller
                     'message' => 'Something went wrong'
                 ], 500);
             }
-              
-        }
     }
 
     public function allNiit () {
