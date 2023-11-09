@@ -15,30 +15,36 @@ class NiitController extends Controller
 
     public function createNiit (Request $request){
 
-        $validator = Validator::make($request->all(), [
-            'firstname'=> 'required|string|Max:10',
-            'lastname'=> 'required|string|Max:10',
-            'department'=> 'required|string|Max:15',
-            'course'=> 'required|string|Max:10',
-            'phone'=> 'required|unique:niit|digits:11',
+        // $validator = Validator::make($request->all(), [
+        //     'firstname'=> 'required|string|Max:10',
+        //     'lastname'=> 'required|string|Max:10',
+        //     'department'=> 'required|string|Max:15',
+        //     'course'=> 'required|string|Max:10',
+        //     'phone'=> 'required|unique:niit|digits:11',
 
-        ]);
+        // ]);
 
-        if ($validator->fails())
-        {
-            return response() ->json([
-                'status' => 422,
-                'errors' => $validator->messages()
-            ], 422);
-        } else {
-                $niit = niit::create([
+        // if ($validator->fails())
+        // {
+        //     return response() ->json([
+        //         'status' => 422,
+        //         'errors' => $validator->messages()
+        //     ], 422);
+        // } else {
+        //         $niit = niit::create([
+        //             'firstname' => $request->firstname,
+        //             'lastname' => $request->lastname,
+        //             'department' => $request->department,
+        //             'course' => $request->course,
+        //             'phone' => $request->phone,
+        //     ]);
+           $niit = niit::create([
                     'firstname' => $request->firstname,
                     'lastname' => $request->lastname,
                     'department' => $request->department,
                     'course' => $request->course,
                     'phone' => $request->phone,
             ]);
-        
             if ($niit) {
                 return response()->json([
                     'status' => 201,
